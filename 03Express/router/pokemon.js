@@ -19,8 +19,8 @@ router.get('/', async (req, res) => {
 })
 
 
-router.get('/crear', (req, res) => {
-    res.render('crear'); //nueva vista que llamaremos Crear
+router.get('/crearpokemon', (req, res) => {
+    res.render('crearpokemon'); //nueva vista que llamaremos Crear
  })
 
  router.post('/', async (req, res) => {
@@ -43,13 +43,13 @@ router.get('/:id', async(req, res) => { //El id vendrá por el GET (barra de dir
 							//Esta variable “Pokemon” está definida arriba con el “require”
         //Buscamos con Mongoose un único documento que coincida con el id indicado
         console.log(pokemonDB) //Para probarlo por consola
-        res.render('detalle', { //Para mostrar el objeto en la vista "detalle", que tenemos que crear
+        res.render('detallepokemon', { //Para mostrar el objeto en la vista "detalle", que tenemos que crear
             pokemon: pokemonDB,
             error: false
         })
     } catch (error) { //Si el id indicado no se encuentra
         console.log('Se ha producido un error', error)
-        res.render('detalle', { //Mostraremos el error en la vista "detalle"
+        res.render('detallepokemon', { //Mostraremos el error en la vista "detalle"
             error: true,
             mensaje: 'Pokemon no encontrado!'
         })

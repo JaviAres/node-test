@@ -1,6 +1,12 @@
-<%- include ("template/cabecera.ejs",{tituloWeb: "Titulo"})%>
-    <h2>
-        <%=titulo %>
+<%- include ("template/cabecera.ejs",{tituloWeb: "Menu Principal"})%>
+    <h2 style="text-align: center;">
+        ¡Bienvenido/a! ¿Qué desea hacer hoy?
     </h2>
+    <a class="btn btn-success btn-block my-4" href="pokemon">Ver Pokemons</a>
+    <a class="btn btn-success btn-block my-4" href="/pokemon/crearpokemon">Crear un nuevo pokemon</a>
+    <a class="btn btn-success btn-block my-4" href="/entrenador">Ver Entrenadores</a>
+    <a class="btn btn-success btn-block my-4" href="/entrenador/crearentrenador">Añadir Entrenadores</a>
+    <a class="btn btn-success btn-block my-4" href="/ciudad">Ver ciudades</a>
+    <a class="btn btn-success btn-block my-4" href="/ciudad/crearciudad">Añadir Ciudad</a>
 </body>
 </html>

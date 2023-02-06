@@ -1,0 +1,15 @@
+<%- include("template/cabecera", {tituloWeb: 'Nueva Ciudad' }) %>
+    <div class="container">
+        <h1 style="text-align: center;">Añadir nueva Ciudad</h1>
+        <form action="/ciudad" class="my-2" method="POST">
+            <input type="text" placeholder="Nombre Ciudad" class="form-control my-2" name="nombre">
+            <input type="text" placeholder="Localizacion" class="form-control my-2" name="localizacion">
+            <input type="text" placeholder="Descripción" class="form-control my-2" name="descripcion">
+           
+            <button type="submit" class="btn btn-dark btn-block">
+                Agregar
+            </button> 
+            <a class="btn btn-danger btn-block my-4" href="/ciudad">Cancelar</a>
+        </form>
+    </div>
+<%- include("template/footer") %>

@@ -34,7 +34,8 @@ app.use(express.static(__dirname+'/public'))
 
 app.use('/', require('./router/rutas'));
 app.use('/pokemon', require("./router/pokemon"))
-
+app.use('/entrenador',require("./router/entrenador"))
+app.use('/ciudad',require("./router/ciudad"))
 app.use((req, res)=>{
     res.status(404).render("404",{tituloError:"Error 404",tituloDescripcion:"Pagina no existe manin"})
 })
